@@ -35,6 +35,14 @@ The score example displays a total of 60, an average of 20.0, and a highest scor
 
 Module 00 uses a supplied `main.py` to select exercises. Module 08's visualization uses pandas, NumPy, and Matplotlib; Module 09 uses Pydantic 2.x.
 
+### Tests
+
+```sh
+make test
+```
+
+`make test` (uv and Make required) prepares a cached environment and checks representative behavior in all eleven modules, including file errors, package imports, Pydantic validation, and an actual headless plot. Dependencies are declared in `requirements-test.txt`; files and plots are written to temporary directories.
+
 ## 日本語
 
 小さなプログラムを作りながらPythonを学ぶ演習集です。庭の管理、ゲームのスコア集計、ファイルの読み書き、宇宙船の乗組員データなどを題材に、基礎文法からプログラムの構成方法までを扱います。
@@ -69,3 +77,11 @@ python3 python_module03/ex1/ft_score_analytics.py 10 20 30
 スコア集計の例では、合計60・平均20.0・最高点30などを表示します。各ファイル名は演習の題材に合わせています。
 
 Module 00 は付属の `main.py` から演習を選んで起動できます。Module 08のデータ可視化にはpandas・NumPy・Matplotlib、Module 09にはPydantic 2系を使います。
+
+### テスト
+
+```sh
+make test
+```
+
+`make test`（uv・Makeが必要）はキャッシュ上に環境を用意し、11モジュールの代表的な動作を検証します。ファイルエラー・パッケージ読込・Pydantic検証・画面なしでのグラフ作成を含みます。依存関係は `requirements-test.txt` に記載し、出力は一時ディレクトリに作成します。
